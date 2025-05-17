@@ -1,0 +1,339 @@
+.displayNone{display: none;}
+body{
+    background: #00A7E1;
+    background: linear-gradient(90deg,rgba(0, 52, 89, 1)  20%, rgba(0, 167, 225, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 100%;
+    background-color: #00A7E1;
+    background: linear-gradient(90deg,rgba(0, 52, 89, 1)  20%, rgba(0, 167, 225, 1) 100%);
+}
+.header_nav{
+    width: 100%;
+}
+.nav_ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav_ul li a{
+    color: #fff;
+}
+
+.nav_ul li a:hover{
+    color: rgb(2, 175, 255);
+    text-decoration: underline;
+}
+
+img#imagem_img_frente{
+    width: 300px;
+}
+/* TÍTULOS*/
+h1#title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #fff;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 85));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*------------------------------------*/
+.title{
+    margin: 150px;
+    margin-bottom: 20px;
+}
+/*Esta classe está contem uma imagem e um texto que estão na index*/
+
+.section_frente{
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40px;
+}
+
+/*Esta classe está na index e ela contem um botão que linka para a página de criação de carnê*/
+
+#btn_index{
+    width: 180px;
+    height: 50px;
+    background-color: #ffffff;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Esta classe está ligada ao botão da index. Esse botão linka para a página de criação do carnê*/
+a#btn_criar{
+    background-color: rgb(0, 255, 85);
+    color:#000;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 180px;
+    border-radius: 20px;
+    box-shadow: -2px 2px 4px #292929;
+    padding: 10px 15px;
+}
+a#btn_criar:hover{
+    background-color: rgb(0, 255, 85);
+    border-radius: 20px;
+    box-shadow: 0 0 0 #292929;
+    padding: 10px 15px;
+}
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* ÁREA DE TEXTOS*/
+p.texto_text_frente{
+    color:#fff;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*carne.html*/
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    margin: 0 auto;
+}
+div.div_btn_add{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 33px;
+}
+button.add_btn{
+    width: 10%;
+    height: 30px;
+    background-color:#d6d6d6;
+    font-size: 13px;
+    border: none;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button.add_btn:hover{
+    background-color: #292929;
+    color: #fff;
+}
+div.folha{
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #8a8a8a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 2.5% 0 2.5%;
+}
+
+div.folha2{
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #8a8a8a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 2.5% 0 2.5%;
+}
+
+section.lado_cliente{
+    width: 43%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+}
+div.valores{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 4%;
+    gap:26px;
+}
+
+div.datas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 4%;
+    gap:26px;
+}
+
+input.input_dados{
+    width: 350px;
+    height: 23px;
+    border-bottom: 1px solid #333;
+    margin-left: 5%;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+input.input_valores{
+    width: 160px;
+    height: 23px;
+    margin-left: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid #444;
+    border-radius: 0;
+}
+
+input.input_datas{
+    width: 160px;
+    height: 23px;
+    margin-left: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid #444;
+    border-radius: 0;
+}
+p.intem{
+    margin: 5px 0;
+}
+
+.qrcode{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    margin: -30px  0 0 40px;
+    box-sizing: border-box;
+}
+
+/*ÁREA DO QRCODE*/
+.picture__input{
+    display:none;
+}
+.picture{
+    width: 120px;
+    height: 120px;
+    background-color: #c5c4c4;
+    border: none;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#888888;
+    cursor: pointer;
+}
+.picture:hover{
+    color:#535353;
+}
+.picture__image{
+
+}
+.picture__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.picture2{
+    width: 120px;
+    height: 120px;
+    background-color: #c5c4c4;
+    border: none;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#888888;
+    cursor: pointer;
+}
+.picture2:hover{
+    color:#535353;
+}
+.picture__img2{
+    max-width: 100%;
+    max-height: 100%;
+}
+/*Essa div ensina como mexer no site*/
+div.tutorial{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .8s;
+}
+.tutorial_fechar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.tutorial_fechar_x{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 20px;
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.tutorial_fechar_x:hover{
+    background-color: rgb(255, 255, 255);
+    color:red;
+}
+.conteudo{
+    width: 80%;
+    background: #00A7E1;
+    background: linear-gradient(90deg,rgb(1, 38, 65)  20%, rgb(0, 117, 156) 80%);
+    /*border: 1px solid #fff;*/
+    margin: 20px auto;
+    color: #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 2px 2px 3px #333;
+}
+
+
+
+.conteudo h2, h3{
+    color:#fff;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+.conteudo p{
+    color: #fff;
+}
+.color_whhite{
+    color:#fff;
+}
+.obs{
+    font-weight: 600;
+}
+
+
+
+

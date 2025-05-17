@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<title>Ccard</title>
+</head>
+<body>
+	<div class="tutorial">
+		<div class="tutorial_fechar">
+			<div class="tutorial_fechar_x" onclick="fecharTuto()">
+				X
+			</div>
+		</div>
+		<section class="conteudo">
+			<h2>Primeiros passos</h2>
+
+			<h3 class="color_whhite">Adicionando elementos</h3>
+			<p>
+				1 - Você verá os botões que você poderá adicionar em seu carnê. Com um click você adicionará ou 
+				removerá ele de sua folha. Nos campos poderão ser digitados os respectivos valores, é só
+				clicar na linha que você poderá digitar.
+				<br> <br>
+				2 - Os botões aparecerão nos retângulos abaixo e ficarão até a hora da impressão. Lembrando, os campos
+				que você não colocar, não aparecerão na hora de imprimir. Então certique-se de ter clicado no campo antes.
+				<span class="obs">OBS:</span> As folhas irão aumentando de acordo com que os campos forem adicionados.
+			</p>
+			<h3 class="color_whhite">Adicionando QRCODE</h3>
+			<p>
+				1 - Primneiro você clicar no botão do qrcode no menu em cima para adicionar o quadro, depois que os quadros 
+				aparecerem nas folhas, você vai clicar no primeiro quadro e navegará até a pasta 
+				onde você salvou o QRCODE que você fez no seu aplicativo do banco e salvou no computador. 
+				Assim que selecionado, aparecer nas dua
+				primeira folha. Depois faça a mesma coisa com o segundo quadro da segunda folha.
+			</p>
+
+			<h3 class="color_whhite">É hora de imprimir.</h3>
+			<p>
+				1 - Depois que você colocou todos os campos, é hora de imprimir. Lembre-se de conferir todos os 
+				campos que você deseja. <br>
+				2 - click no botão imprimir para sumir o menu. <br>
+				3 - Dê control + P ou click com o botão direito do mouse e vá até a opção imprimir. <br> 
+				4 - Ajuste de modo retrato para modo paizagem. <span class="obs">OBS:</span> se já estiver em 
+				modo paizagem, não precisa.
+
+			</p>
+
+		</section>
+	</div>
+    <main>
+		<div class="div_btn_add">
+			<button class="add_btn" onclick="pegarNome()">Nome</button>
+			<button class="add_btn" onclick="insertDress()">Endereço</button>
+			<button class="add_btn" onclick="insertValor()">Valor total</button>
+			<button class="add_btn" onclick="insertValorParcela()">Parcela</button>
+			<button class="add_btn" onclick="insertData()">Vencimento</button>
+			<button class="add_btn" onclick="InsertVencimento()">Dias de atraso</button>
+			<button class="add_btn" onclick="abrirQrcode()">Qrcode</button>
+			<button class="add_btn"  onclick="fecharPraPrint()">Imprimir</button>
+		</div>
+		<div class="folha">
+			<section class="lado_cliente">
+				<div class="lc_nome displayNone" id="lc_nome">
+					<p class="item">Nome</p>
+					<input type="text" id="input_lc_nome" class="input_dados nome_one" placeholder="Digite o nome aqui">
+				</div>
+				<div class="lc_endereco displayNone" id="lc_endereco">
+					<p class="item">Endereço</p>
+					<input type="text" id="input_lc_endereco" class="input_dados endereco_one" placeholder="Digite o endereço aqui">
+				</div>
+				<div class="valores">
+					<div class="lc_valor displayNone" id="valor_total">
+						<p class="item">Valor total</p>
+						<input type="text" id="input_lc_valor" class="input_valores  valor_zeroone" placeholder="Digite o valor aqui">
+					</div>
+					<div class="lc_valor_parcela displayNone" id="valor_parcela">
+						<p class="item">Valor da parcela</p>
+						<input type="text" id="input_lc_valor_parcela" class="input_valores valor_zerotwo" placeholder="Digite o valor aqui">
+					</div>
+				</div>
+				<div class="datas">
+					<div class="lc_data_vencimento displayNone" id="data_vencimento">
+						<p class="item">Data de vencimento</p>
+						<input type="text" id="input_lc_data_vencimento" class="input_datas data_one">
+					</div>
+					<div class="lc_data_atraso displayNone" id="data_atraso">
+						<p class="item">Dias de atraso</p>
+						<input type="text" id="input_lc_data_atraso" class="input_datas data_two">
+					</div>
+				</div>
+
+			</section>
+			<section class="lado_empresa">
+				<div class="le_nome displayNone" id="le_nome">
+					<p class="item">Nome</p>
+					<input type="text" id="input_le_nome" class="input_dados nome_two" placeholder="Digite o nome aqui">
+				</div>
+				<div class="le_endereco displayNone" id="le_endereco">
+					<p class="item">Endereço</p>
+					<input type="text" id="input_le_endereco" class="input_dados endereco_two" placeholder="Digite o endereço aqui">
+				</div>
+				<div class="valores">
+					<div class="le_valor displayNone"  id="valor_total2">
+						<p class="item">Valor total</p>
+						<input type="text" id="input_le_valor" class="input_valores valor" placeholder="Digite o valor aqui">
+					</div>
+					<div class="lc_valor_parcela displayNone" id="valor_parcela2">
+						<p class="item">Valor da parcela</p>
+						<input type="text" id="input_le_valor_parcela" class="input_valores valor_two" placeholder="Digite o valor aqui">
+					</div>
+				</div>
+				<div class="datas">
+					<div class="le_data_vencimento displayNone" id="data_vencimento2">
+						<p class="item">Data de vencimento</p>
+						<input type="date" id="input_le_data_vencimento" class="input_datas data_zero_one">
+					</div>
+					<div class="lc_data_atraso displayNone" id="data_atraso2">
+						<p class="item">Dias de atraso</p>
+						<input type="text" id="input_le_data_atraso" class="input_datas data_zero_two">
+					</div>
+				</div>
+			</section>
+
+			<div class="qrcode displayNone" id="qrcode">
+				<label class="picture" for="picture__input" tabIndex="0">
+					<span class="picture__image"></span>
+				</label>
+				<input type="file" accept="image/*" class="picture__input" id="picture__input">
+			</div>
+		</div>
+
+		<div class="folha2">
+			<section class="lado_cliente">
+				<div class="lc_nome displayNone" id="lc2_nome">
+					<p class="item">Nome</p>
+					<input type="text" id="input_lc2_nome" class="input_dados nomes" placeholder="Digite o nome aqui">
+				</div>
+				<div class="lc_endereco displayNone" id="lc2_endereco">
+					<p class="item">Endereço</p>
+					<input type="text" id="input_lc2_endereco" class="input_dados" placeholder="Digite o endereço aqui">
+				</div>
+				<div class="valores">
+					<div class="lc_valor displayNone" id="valor_total3">
+						<p class="item">Valor total</p>
+						<input type="text" id="input_lc2_valor" class="input_valores" placeholder="Digite o valor aqui">
+					</div>
+					<div class="lc_valor_parcela displayNone" id="valor_parcela3">
+						<p class="item">Valor da parcela</p>
+						<input type="text" id="input_lc2_valor_parcela" class="input_valores" placeholder="Digite o valor aqui">
+					</div>
+				</div>
+				<div class="datas">
+					<div class="lc_data_vencimento displayNone" id="data_vencimento3">
+						<p class="item">Data de vencimento</p>
+						<input type="date" id="input_lc2_data_vencimento" class="input_datas" >
+					</div>
+					<div class="lc_data_atraso displayNone" id="data_atraso3">
+						<p class="item">Dias de atraso</p>
+						<input type="text" id="input_lc2_data_atraso" class="input_datas" >
+					</div>
+				</div>
+
+			</section>
+			<section class="lado_empresa">
+				<div class="le_nome displayNone" id="lce2_nome">
+					<p class="item">Nome</p>
+					<input type="text" id="input_le2_nome" class="input_dados nomes" placeholder="Digite o nome aqui">
+				</div>
+				<div class="le_endereco displayNone" id="le2_endereco">
+					<p class="item">Endereço</p>
+					<input type="text" id="input_le2_endereco" class="input_dados" placeholder="Digite o endereço aqui">
+				</div>
+				<div class="valores">
+					<div class="le_valor displayNone" id="valor_total4">
+						<p class="item">Valor total</p>
+						<input type="text" id="input_le2_valor" class="input_valores" placeholder="Digite o valor aqui">
+					</div>
+					<div class="lc_valor_parcela displayNone" id="valor_parcela4">
+						<p class="item">Valor da parcela</p>
+						<input type="text" id="input_le2_valor_parcela" class="input_valores" placeholder="Digite o valor aqui">
+					</div>
+				</div>
+				<div class="datas">
+					<div class="le_data_vencimento displayNone" id="data_vencimento4">
+						<p class="item">Data de vencimento</p>
+						<input type="date" id="input_le2_data_vencimento" class="input_datas">
+					</div>
+					<div class="lc_data_atraso displayNone" id="data_atraso4">
+						<p class="item">Dias de atraso</p>
+						<input type="text" id="input_le2_data_atraso" class="input_datas" >
+					</div>
+				</div>
+				
+			</section>
+			<div class="qrcode displayNone" id="qrcode2">
+				<label class="picture2" for="picture__input2" tabIndex="0">
+					<span class="picture__image2"></span>
+				</label>
+				<input type="file" accept="image/*" class="picture__input" id="picture__input2">
+			</div>
+		</div>
+
+		
+
+	</main>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
