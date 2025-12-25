@@ -56,7 +56,7 @@
 			<button class="add_btn" onclick="insertValor()">Valor total</button>
 			<button class="add_btn" onclick="insertValorParcela()">Parcela</button>
 			<button class="add_btn" onclick="insertData()">Vencimento</button>
-			<button class="add_btn" onclick="InsertVencimento()">Dias de atraso</button>
+			<button class="add_btn" onclick="InsertVencimento()">Data Pagamento</button>
 			<button class="add_btn" onclick="abrirQrcode()">Qrcode</button>
 			<button class="add_btn"  onclick="fecharPraPrint()">Imprimir</button>
 		</div>
@@ -64,7 +64,7 @@
 			<section class="lado_cliente">
 				<div class="lc_nome displayNone" id="lc_nome">
 					<p class="item">Nome</p>
-					<input type="text" id="input_lc_nome" class="input_dados nome_one" placeholder="Digite o nome aqui">
+					<input type="text" id="input_lc_nome" class="input_dados nome_one" placeholder="Digite o nome do cliente">
 				</div>
 				<div class="lc_endereco displayNone" id="lc_endereco">
 					<p class="item">Endereço</p>
@@ -83,10 +83,10 @@
 				<div class="datas">
 					<div class="lc_data_vencimento displayNone" id="data_vencimento">
 						<p class="item">Data de vencimento</p>
-						<input type="text" id="input_lc_data_vencimento" class="input_datas data_one">
+						<input type="date" id="input_lc_data_vencimento" class="input_datas data_one">
 					</div>
 					<div class="lc_data_atraso displayNone" id="data_atraso">
-						<p class="item">Dias de atraso</p>
+						<p class="item">Data Pagamento</p>
 						<input type="text" id="input_lc_data_atraso" class="input_datas data_two">
 					</div>
 				</div>
@@ -95,7 +95,7 @@
 			<section class="lado_empresa">
 				<div class="le_nome displayNone" id="le_nome">
 					<p class="item">Nome</p>
-					<input type="text" id="input_le_nome" class="input_dados nome_two" placeholder="Digite o nome aqui">
+					<input type="text" id="input_le_nome" class="input_dados nome_two" placeholder="Digite o nome do cliente">
 				</div>
 				<div class="le_endereco displayNone" id="le_endereco">
 					<p class="item">Endereço</p>
@@ -117,7 +117,7 @@
 						<input type="date" id="input_le_data_vencimento" class="input_datas data_zero_one">
 					</div>
 					<div class="lc_data_atraso displayNone" id="data_atraso2">
-						<p class="item">Dias de atraso</p>
+						<p class="item">Data Pagamento</p>
 						<input type="text" id="input_le_data_atraso" class="input_datas data_zero_two">
 					</div>
 				</div>
@@ -135,7 +135,7 @@
 			<section class="lado_cliente">
 				<div class="lc_nome displayNone" id="lc2_nome">
 					<p class="item">Nome</p>
-					<input type="text" id="input_lc2_nome" class="input_dados nomes" placeholder="Digite o nome aqui">
+					<input type="text" id="input_lc2_nome" class="input_dados nomes" placeholder="Digite o nome do cliente">
 				</div>
 				<div class="lc_endereco displayNone" id="lc2_endereco">
 					<p class="item">Endereço</p>
@@ -166,7 +166,7 @@
 			<section class="lado_empresa">
 				<div class="le_nome displayNone" id="lce2_nome">
 					<p class="item">Nome</p>
-					<input type="text" id="input_le2_nome" class="input_dados nomes" placeholder="Digite o nome aqui">
+					<input type="text" id="input_le2_nome" class="input_dados nomes" placeholder="Digite o nome do cliente">
 				</div>
 				<div class="le_endereco displayNone" id="le2_endereco">
 					<p class="item">Endereço</p>
